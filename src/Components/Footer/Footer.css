@@ -1,8 +1,22 @@
 .footer__container {
+  display: flex;
   position: fixed;
   bottom: 0;
   height: 100px;
   width: 100%;
+  padding: 10px;
   background-color: teal;
   color: white;
+}
+
+.footer_left {
+  flex: 0.3;
+}
+
+.footer_center {
+  flex: 0.4;
+}
+
+.footer_right {
+  flex: 0.3;
 }
