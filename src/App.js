@@ -25,7 +25,7 @@ function App() {
     }
   }, [token, dispatch]);
 
-  return <div className="App">{true ? <Player /> : <Login />}</div>;
+  return <div className="App">{token ? <Player /> : <Login />}</div>;
 }
 
 export default App;

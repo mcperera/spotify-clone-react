@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import SpotifyWebApi from "spotify-web-api-js";
 
@@ -15,16 +15,22 @@ import "./SideBar.css";
 const spotify = new SpotifyWebApi();
 
 function SideBar() {
-  const [{ playlists }, dispatch] = useStoreValues();
+  const [{ discover_weekly, playlists }, dispatch] = useStoreValues();
 
-  useEffect(() => {
-    spotify.getUserPlaylists().then((playlists) => {
-      dispatch({ type: "SET_PLAYLISTS", playlists: playlists });
+  const handlePlaylistClick = (id) => {
+    spotify.getPlaylist(id).then((list) => {
+      dispatch({ type: "SET_DISCOVER_WEEKLY", discoverList: list });
     });
-  }, [dispatch]);
+  };
 
-  const list = playlists?.items?.map((item, index) => (
-    <SideBarOptions key={index} title={item.name} />
+  const list = playlists?.items?.map((item) => (
+    <SideBarOptions
+      key={item.id}
+      title={item.name}
+      id={item.id}
+      handlePlaylistClick={handlePlaylistClick}
+      className={discover_weekly?.id === item.id ? "active_list" : ""}
+    />
   ));
 
   return (

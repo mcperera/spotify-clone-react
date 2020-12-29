@@ -24,3 +24,7 @@
 .title {
   margin: 0 10px;
 }
+
+.active_list {
+  color: white;
+}
