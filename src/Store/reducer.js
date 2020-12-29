@@ -25,6 +25,16 @@ const reducer = (state, action) => {
         ...state,
         playlists: action.playlists,
       };
+    case "SET_PLAY":
+      return {
+        ...state,
+        playing: true,
+      };
+    case "SET_PAUSE":
+      return {
+        ...state,
+        playing: false,
+      };
     default:
       return state;
   }

@@ -1,0 +1,21 @@
+.right__container {
+  padding: 10px;
+}
+
+.right_icons {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out !important;
+}
+
+.right_icons:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* .slider > .MuiSlider-root {
+  color: white !important;
+} */

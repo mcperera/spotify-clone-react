@@ -11,7 +11,7 @@
 }
 
 .song__info {
-  width: 50%;
+  width: 40%;
   padding: 0 10px;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .song__info > p {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .favorite__icon {
@@ -29,5 +29,5 @@
 }
 
 .left__container > .MuiSvgIcon-root:hover {
-  fill: red;
+  fill: rgb(255, 53, 53);
 }

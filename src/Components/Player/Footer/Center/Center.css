@@ -1,0 +1,45 @@
+.center__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center__row__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.center__icons {
+  margin: 0 10px;
+  font-size: 1.7rem;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out !important;
+}
+
+.center__icons:hover {
+  color: rgb(0, 0, 0);
+}
+
+.play__pause__box {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+}
+
+.play__pause {
+  font-size: 2.7rem !important;
+}
+
+.song__tracker {
+  height: 2px;
+  width: 90%;
+  background-color: white;
+}

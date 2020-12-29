@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 
 import SpotifyWebApi from "spotify-web-api-js";
 
-import { useStoreValues } from "../../Store";
+import { useStoreValues } from "../../../Store";
 
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
-import SideBarOptions from "./../SideBarOptions/SideBarOptions";
+import SideBarOptions from "./SideBarOptions/SideBarOptions";
 
-import logoWhite from "../../assets/logo/Spotify_Logo_RGB_White.png";
+import logoWhite from "../../../assets/logo/Spotify_Logo_RGB_White.png";
 import "./SideBar.css";
 
 const spotify = new SpotifyWebApi();

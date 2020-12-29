@@ -2,7 +2,7 @@ import React from "react";
 
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
-import albumCover from "../../../assets/album/test.jpg";
+import albumCover from "../../../../assets/album/test.jpg";
 
 import "./Left.css";
 
