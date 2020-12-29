@@ -1,0 +1,26 @@
+.side_options {
+  display: flex;
+  padding: 10px;
+  color: grey;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+.side_options:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.13);
+}
+
+.side_icon {
+  margin: 0 10px;
+}
+
+.title {
+  margin: 0 10px;
+}
