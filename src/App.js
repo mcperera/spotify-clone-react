@@ -22,10 +22,6 @@ function App() {
     if (_token) {
       spotify.setAccessToken(_token);
       dispatch({ type: "SET_TOKEN", token: _token });
-
-      spotify.getUserPlaylists().then((playlists) => {
-        dispatch({ type: "SET_PLAYLISTS", playlists: playlists });
-      });
     }
   }, [token, dispatch]);
 

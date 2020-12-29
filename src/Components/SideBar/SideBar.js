@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import SpotifyWebApi from "spotify-web-api-js";
 
 import { useStoreValues } from "../../Store";
 
@@ -10,13 +12,19 @@ import SideBarOptions from "./../SideBarOptions/SideBarOptions";
 import logoWhite from "../../assets/logo/Spotify_Logo_RGB_White.png";
 import "./SideBar.css";
 
+const spotify = new SpotifyWebApi();
+
 function SideBar() {
-  const [{ playlists }] = useStoreValues();
+  const [{ playlists }, dispatch] = useStoreValues();
 
-  console.log(playlists.items);
+  useEffect(() => {
+    spotify.getUserPlaylists().then((playlists) => {
+      dispatch({ type: "SET_PLAYLISTS", playlists: playlists });
+    });
+  }, [dispatch]);
 
-  const list = playlists?.items?.map((item) => (
-    <SideBarOptions title={item.name} />
+  const list = playlists?.items?.map((item, index) => (
+    <SideBarOptions key={index} title={item.name} />
   ));
 
   return (

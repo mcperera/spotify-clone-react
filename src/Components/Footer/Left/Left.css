@@ -1,0 +1,33 @@
+.left__container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.album {
+  height: 60px;
+  width: 70px;
+  object-fit: contain;
+}
+
+.song__info {
+  width: 50%;
+  padding: 0 10px;
+}
+
+.song__info > h4 {
+  font-weight: 500;
+}
+
+.song__info > p {
+  font-size: 14px;
+}
+
+.favorite__icon {
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.left__container > .MuiSvgIcon-root:hover {
+  fill: red;
+}

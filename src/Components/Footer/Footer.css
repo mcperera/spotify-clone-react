@@ -1,5 +1,6 @@
 .footer__container {
   display: flex;
+  align-items: center;
   position: fixed;
   bottom: 0;
   height: 100px;
