@@ -13,7 +13,7 @@ import "./Player.css";
 const spotify = new SpotifyWebApi();
 
 function Player() {
-  const [{ discover_weekly }, dispatch] = useStoreValues();
+  const [, dispatch] = useStoreValues();
 
   useEffect(() => {
     spotify.getUserPlaylists().then((playlists) => {
@@ -24,8 +24,6 @@ function Player() {
       });
     });
   }, [dispatch]);
-
-  console.log("out", discover_weekly);
 
   return (
     <div className="player__contaienr">

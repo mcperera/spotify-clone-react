@@ -1,0 +1,18 @@
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  padding: 4px 14px 4px 4px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.avatar {
+  margin-right: 10px;
+}

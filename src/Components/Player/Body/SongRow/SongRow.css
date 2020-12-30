@@ -1,0 +1,38 @@
+.row {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 5px;
+
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+.row:hover {
+  background-color: rgba(255, 255, 255, 0.13);
+}
+
+.row > img {
+  height: 50px;
+  width: 50px;
+  margin: 0 25px;
+  object-fit: contain;
+}
+
+.row__song__info {
+  margin-right: 25px;
+}
+
+.row__song__info > h4 {
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+.row__song__info > p {
+  font-size: 12px;
+}

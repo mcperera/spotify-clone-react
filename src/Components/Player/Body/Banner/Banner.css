@@ -1,0 +1,15 @@
+.banner__container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.banner__album {
+  object-fit: contain;
+  height: 150px;
+  width: 150px;
+}
+
+.banner__info {
+  margin: 15px;
+  font-size: 1.3rem;
+}

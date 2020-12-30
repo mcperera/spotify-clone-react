@@ -22,6 +22,14 @@ function App() {
     if (_token) {
       spotify.setAccessToken(_token);
       dispatch({ type: "SET_TOKEN", token: _token });
+
+      spotify.getMe().then((user) => {
+        dispatch({ type: "SET_USER", user });
+      });
+
+      spotify.getMyCurrentPlayingTrack().then((current) => {
+        dispatch({ type: "SET_CURRENT_PLAYING", current });
+      });
     }
   }, [token, dispatch]);
 
