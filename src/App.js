@@ -29,6 +29,7 @@ function App() {
 
       spotify.getMyCurrentPlayingTrack().then((current) => {
         dispatch({ type: "SET_CURRENT_PLAYING", current });
+        // console.log("app", current);
       });
     }
   }, [token, dispatch]);

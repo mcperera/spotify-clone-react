@@ -26,20 +26,20 @@ const reducer = (state, action) => {
         ...state,
         playlists: action.playlists,
       };
-    case "SET_PLAY":
+    case "SET_PLAYING":
       return {
         ...state,
-        playing: true,
-      };
-    case "SET_PAUSE":
-      return {
-        ...state,
-        playing: false,
+        playing: action.playing,
       };
     case "SET_DISCOVER_WEEKLY":
       return {
         ...state,
         discover_weekly: action.discoverList,
+      };
+    case "SET_ITEM":
+      return {
+        ...state,
+        item: action.item,
       };
     case "SET_CURRENT_PLAYING":
       return {
