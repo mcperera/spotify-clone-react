@@ -6,6 +6,7 @@ export const initialState = {
   top_artists: null,
   playing: false,
   item: null,
+  current_track: null,
 };
 
 const reducer = (state, action) => {
@@ -39,6 +40,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         item: action.item,
+      };
+    case "SET_CURRENT_PLAYING":
+      return {
+        ...state,
+        current_track: action.state,
       };
     default:
       return state;

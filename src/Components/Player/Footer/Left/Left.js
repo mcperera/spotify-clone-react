@@ -24,6 +24,11 @@ function Left() {
           });
 
           dispatch({
+            type: "SET_CURRENT_PLAYING",
+            item: state,
+          });
+
+          dispatch({
             type: "SET_ITEM",
             item: state.item,
           });

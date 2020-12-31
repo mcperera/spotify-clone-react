@@ -25,21 +25,5 @@
 }
 
 .center__icons:hover {
-  color: rgb(0, 0, 0);
-}
-
-.play__pause__box {
-  display: flex;
-  justify-content: center;
-  width: 60px;
-}
-
-.play__pause {
-  font-size: 2.7rem !important;
-}
-
-.song__tracker {
-  height: 2px;
-  width: 90%;
-  background-color: white;
+  color: teal;
 }
