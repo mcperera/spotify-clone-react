@@ -8,11 +8,14 @@ function SongRow({
   songName,
   artistName,
   duration,
-  id,
+  track_id,
   handleCurrentPlay,
+  className,
 }) {
   return (
-    <div className="row" onClick={() => handleCurrentPlay(id)}>
+    <div
+      className={`row ${className}`}
+      onClick={() => handleCurrentPlay(track_id)}>
       <h5>{`${rowNumber}.`}</h5>
       <img src={src} alt="row-album" />
       <div className="row__song__info">

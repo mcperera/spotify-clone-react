@@ -26,11 +26,6 @@ function App() {
       spotify.getMe().then((user) => {
         dispatch({ type: "SET_USER", user });
       });
-
-      spotify.getMyCurrentPlayingTrack().then((current) => {
-        dispatch({ type: "SET_CURRENT_PLAYING", current });
-        // console.log("app", current);
-      });
     }
   }, [token, dispatch]);
 

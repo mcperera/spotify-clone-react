@@ -17,6 +17,10 @@
   background-color: rgba(255, 255, 255, 0.13);
 }
 
+.playing {
+  background-color: rgba(255, 255, 255, 0.13);
+}
+
 .row > img {
   height: 50px;
   width: 50px;

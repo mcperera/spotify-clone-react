@@ -20,7 +20,6 @@ function Center() {
 
   useEffect(() => {
     spotify.getMyCurrentPlaybackState().then((state) => {
-      // console.log("Center ", state);
       dispatch({
         type: "SET_PLAYING",
         playing: state.is_playing,

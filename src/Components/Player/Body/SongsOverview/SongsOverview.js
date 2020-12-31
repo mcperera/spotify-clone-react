@@ -1,16 +1,38 @@
 import React from "react";
 
+import SpotifyWebApi from "spotify-web-api-js";
+
 import { useStoreValues } from "../../../../Store";
 
 import SongRow from "../SongRow/SongRow";
 
 import "./SongsOverview.css";
 
-function SongsOverview() {
-  const [{ discover_weekly }] = useStoreValues();
+const spotify = new SpotifyWebApi();
 
-  const handleCurrentPlay = (id) => {
-    console.log("discover_weekly track ID: ", id);
+function SongsOverview() {
+  const [{ discover_weekly, item }, dispatch] = useStoreValues();
+
+  const handleCurrentPlay = (track_id) => {
+    console.log("discover_weekly track ID: ", track_id);
+    spotify
+      .play({
+        uris: [`spotify:track:${track_id}`],
+      })
+      .then((res) => {
+        console.log("Play", res);
+        spotify.getMyCurrentPlayingTrack().then((current) => {
+          dispatch({
+            type: "SET_PLAYING",
+            playing: true,
+          });
+
+          dispatch({
+            type: "SET_ITEM",
+            item: current.item,
+          });
+        });
+      });
   };
 
   const row = discover_weekly?.tracks.items.map((song, index) => {
@@ -29,7 +51,7 @@ function SongsOverview() {
     return (
       <SongRow
         key={song.track.id}
-        id={song.track.id}
+        track_id={song.track.id}
         rowNumber={index + 1}
         src={song.track.album.images[0].url}
         songName={song.track.album.name}
@@ -37,6 +59,7 @@ function SongsOverview() {
         artistName={artists}
         duration={duration}
         handleCurrentPlay={handleCurrentPlay}
+        className={item.id === song.track.id ? "playing" : ""}
       />
     );
   });

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-// import SpotifyWebApi from "spotify-web-api-js";
+import SpotifyWebApi from "spotify-web-api-js";
 
 import { useStoreValues } from "../../../../Store";
 
@@ -8,31 +8,30 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 import "./Left.css";
 
-// const spotify = new SpotifyWebApi();
+const spotify = new SpotifyWebApi();
 
 function Left() {
-  const [{ item }] = useStoreValues();
-  // const [currentTrack, setCurrentTrack] = useState(item);
+  const [{ item }, dispatch] = useStoreValues();
 
-  // useEffect(() => {
-  //   spotify.getMyCurrentPlayingTrack().then((current) => {
-  //     dispatch({ type: "SET_CURRENT_PLAYING", current });
-  //   });
-  // }, [dispatch]);
+  useEffect(() => {
+    const refreshCurrentTrack = setInterval(() => {
+      spotify.getMyCurrentPlaybackState().then((state) => {
+        if ((state && !item) || state.item.id !== item.id) {
+          console.log("Left ", state);
+          dispatch({
+            type: "SET_PLAYING",
+            playing: state.is_playing,
+          });
 
-  // if (current_track) {
-  //   setCurrentTrack(current_track);
-  // }
-
-  // useEffect(() => {
-  //   const refreshCurrentTrack = setInterval(() => {
-  //     console.log("left__container__Update");
-  //     spotify.getMyCurrentPlayingTrack().then((current) => {
-  //       setCurrentTrack(current);
-  //     });
-  //   }, 10000);
-  //   return () => clearInterval(refreshCurrentTrack);
-  // }, [dispatch]);
+          dispatch({
+            type: "SET_ITEM",
+            item: state.item,
+          });
+        }
+      });
+    }, 10000);
+    return () => clearInterval(refreshCurrentTrack);
+  }, [item, dispatch]);
 
   return (
     <div className="left__container">
