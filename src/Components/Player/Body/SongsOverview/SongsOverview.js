@@ -59,7 +59,8 @@ function SongsOverview() {
         artistName={artists}
         duration={duration}
         handleCurrentPlay={handleCurrentPlay}
-        className={item.id === song.track.id ? "playing" : ""}
+        className={item?.id === song.track.id ? "playing" : ""}
+        // className={song.track.id ? "playing" : ""}
       />
     );
   });

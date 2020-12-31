@@ -9,7 +9,7 @@ const spotify = new SpotifyWebApi();
 function SongProgress() {
   const [duration, setDuration] = useState({
     durationMin: 0,
-    currentProgMin: 0,
+    currentProgMin: null,
     currentProg: 0,
   });
 
@@ -24,14 +24,16 @@ function SongProgress() {
   useEffect(() => {
     const songProgress = setInterval(() => {
       spotify.getMyCurrentPlaybackState().then((state) => {
-        var progress_ms = state.progress_ms;
-        var duration_ms = state.item.duration_ms;
+        if (state) {
+          var progress_ms = state.progress_ms;
+          var duration_ms = state.item.duration_ms;
 
-        const durationMin = miliToMin(duration_ms);
-        const currentProgMin = miliToMin(progress_ms);
-        const currentProg = (progress_ms / duration_ms) * 100;
+          const durationMin = miliToMin(duration_ms);
+          const currentProgMin = miliToMin(progress_ms);
+          const currentProg = (progress_ms / duration_ms) * 100;
 
-        setDuration({ durationMin, currentProgMin, currentProg });
+          setDuration({ durationMin, currentProgMin, currentProg });
+        }
       });
     }, 1000);
 
@@ -44,11 +46,11 @@ function SongProgress() {
 
   return (
     <div className="tracker">
-      <p>{duration.currentProgMin}</p>
+      {duration.currentProgMin && <p>{duration.currentProgMin}</p>}
       <div className="song__tracker">
         <div className="song__duration" style={styleTracker}></div>
       </div>
-      <p>{duration.durationMin}</p>
+      {duration.currentProgMin && <p>{duration.durationMin}</p>}
     </div>
   );
 }

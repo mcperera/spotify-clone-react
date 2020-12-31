@@ -16,22 +16,24 @@ function Left() {
   useEffect(() => {
     const refreshCurrentTrack = setInterval(() => {
       spotify.getMyCurrentPlaybackState().then((state) => {
-        if ((state && !item) || state.item.id !== item.id) {
-          console.log("Left ", state);
-          dispatch({
-            type: "SET_PLAYING",
-            playing: state.is_playing,
-          });
+        if (state) {
+          if ((state && !item) || state.item.id !== item.id) {
+            console.log("Left ", state);
+            dispatch({
+              type: "SET_PLAYING",
+              playing: state.is_playing,
+            });
 
-          dispatch({
-            type: "SET_CURRENT_PLAYING",
-            item: state,
-          });
+            dispatch({
+              type: "SET_CURRENT_PLAYING",
+              item: state,
+            });
 
-          dispatch({
-            type: "SET_ITEM",
-            item: state.item,
-          });
+            dispatch({
+              type: "SET_ITEM",
+              item: state.item,
+            });
+          }
         }
       });
     }, 10000);
