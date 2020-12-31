@@ -13,6 +13,10 @@
   color: white;
 }
 
+.header__right > p {
+  font-size: 14px;
+}
+
 .avatar {
   margin-right: 10px;
 }

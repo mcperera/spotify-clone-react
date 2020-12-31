@@ -14,7 +14,7 @@ function Header() {
       <div className="header__left"></div>
       <div className="header__right">
         <Avatar className="avatar" src={user?.images[0].url} />
-        <h5>{user?.display_name}</h5>
+        <p>{user?.display_name}</p>
       </div>
     </div>
   );

@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 
 import SpotifyWebApi from "spotify-web-api-js";
 
+import { useStoreValues } from "../../../../../Store";
+
 import "./SongProgress.css";
 
 const spotify = new SpotifyWebApi();
 
 function SongProgress() {
+  const [{ playing }, dispatch] = useStoreValues();
   const [duration, setDuration] = useState({
     durationMin: 0,
     currentProgMin: null,
@@ -33,12 +36,27 @@ function SongProgress() {
           const currentProg = (progress_ms / duration_ms) * 100;
 
           setDuration({ durationMin, currentProgMin, currentProg });
+
+          dispatch({
+            type: "SET_PLAYING",
+            playing: state.is_playing,
+          });
+
+          dispatch({
+            type: "SET_CURRENT_PLAYING",
+            item: state,
+          });
+
+          dispatch({
+            type: "SET_ITEM",
+            item: state.item,
+          });
         }
       });
     }, 1000);
 
     return () => clearInterval(songProgress);
-  }, []);
+  }, [dispatch]);
 
   const styleTracker = {
     width: `${duration.currentProg}%`,
@@ -48,7 +66,9 @@ function SongProgress() {
     <div className="tracker">
       {duration.currentProgMin && <p>{duration.currentProgMin}</p>}
       <div className="song__tracker">
-        <div className="song__duration" style={styleTracker}></div>
+        <div
+          className={playing ? "song__duration" : "song__duration2"}
+          style={styleTracker}></div>
       </div>
       {duration.currentProgMin && <p>{duration.durationMin}</p>}
     </div>

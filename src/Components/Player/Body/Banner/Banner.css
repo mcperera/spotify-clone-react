@@ -1,6 +1,7 @@
 .banner__container {
   display: flex;
   align-items: flex-end;
+  color: white;
 }
 
 .banner__album {

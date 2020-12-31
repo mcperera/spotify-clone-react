@@ -3,7 +3,35 @@
   height: calc(100vh - 100px);
   padding: 10px 20px;
   overflow-y: overlay;
-  background: linear-gradient(transparent, rgb(0, 0, 0));
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+  -moz-animation: gradient 15s ease infinite;
+  -o-animation: gradient 15s ease infinite;
+  -ms-transition: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
+}
+
+.body__container2 {
+  flex: 0.8;
+  height: calc(100vh - 100px);
+  padding: 10px 20px;
+  overflow-y: overlay;
+
+  background: linear-gradient(-45deg, #ffffff, #000000);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* .body__container::-webkit-scrollbar-track {

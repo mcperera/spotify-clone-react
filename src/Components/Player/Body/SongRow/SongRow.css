@@ -32,6 +32,10 @@
   margin-right: 25px;
 }
 
+.row > h5 {
+  font-weight: 500;
+}
+
 .row__song__info > h4 {
   margin: 5px 0;
   font-weight: 500;
