@@ -40,8 +40,7 @@
 } */
 
 .body__container::-webkit-scrollbar {
-  width: 7px;
-  background-color: #f5f5f5;
+  width: 5px;
 }
 
 .body__container::-webkit-scrollbar-thumb {
@@ -49,8 +48,7 @@
 }
 
 .body__container2::-webkit-scrollbar {
-  width: 7px;
-  background-color: #f5f5f5;
+  width: 5px;
 }
 
 .body__container2::-webkit-scrollbar-thumb {
