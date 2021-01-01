@@ -8,6 +8,26 @@
   color: white;
 }
 
+.playlist__container {
+  overflow-y: overlay;
+}
+
+.playlist__container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.playlist__container::-webkit-scrollbar-thumb {
+  background-color: #cccccc3d;
+}
+
+.playlist__container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.playlist__container::-webkit-scrollbar-thumb {
+  background-color: #1f1f1ffd;
+}
+
 .sidebar > img {
   width: 100px;
   object-fit: contain;

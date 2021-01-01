@@ -1,6 +1,7 @@
 .side_options {
   display: flex;
   padding: 10px;
+  margin: 2px 5px 2px 0;
   color: grey;
   cursor: pointer;
   border-radius: 5px;
@@ -14,7 +15,7 @@
 
 .side_options:hover {
   color: white;
-  background-color: rgba(255, 255, 255, 0.13);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .side_icon {
@@ -23,9 +24,10 @@
 
 .title {
   width: 100%;
-  margin: 0 10px;
+  padding: 0 10px;
 }
 
 .active_list {
   color: white;
+  background-color: rgba(255, 255, 255, 0.075);
 }

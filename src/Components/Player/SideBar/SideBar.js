@@ -40,7 +40,7 @@ function SideBar() {
       <SideBarOptions Icon={SearchIcon} title={"Search"} />
       <SideBarOptions Icon={LibraryMusicIcon} title={"Your Library"} />
       <hr className="separator_side_bar" />
-      {list}
+      <div className="playlist__container">{list}</div>
     </div>
   );
 }
