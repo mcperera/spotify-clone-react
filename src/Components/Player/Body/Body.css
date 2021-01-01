@@ -48,3 +48,13 @@
   background-color: #0000008c;
   border: 2px solid #555555;
 }
+
+.body__container2::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f5f5f5;
+}
+
+.body__container2::-webkit-scrollbar-thumb {
+  background-color: #0000008c;
+  border: 2px solid #555555;
+}

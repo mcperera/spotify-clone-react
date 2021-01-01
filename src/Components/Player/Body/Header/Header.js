@@ -13,8 +13,11 @@ function Header() {
     <div className="header__container">
       <div className="header__left"></div>
       <div className="header__right">
-        <Avatar className="avatar" src={user?.images[0].url} />
-        <p>{user?.display_name}</p>
+        <Avatar
+          className="avatar"
+          src={user?.images[0].url ? user?.images[0].url : null}
+        />
+        <p>{user?.display_name ? user?.display_name : "Hello User"}</p>
       </div>
     </div>
   );
