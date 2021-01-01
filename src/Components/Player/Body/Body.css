@@ -46,7 +46,6 @@
 
 .body__container::-webkit-scrollbar-thumb {
   background-color: #0000008c;
-  border: 2px solid #555555;
 }
 
 .body__container2::-webkit-scrollbar {
@@ -56,5 +55,4 @@
 
 .body__container2::-webkit-scrollbar-thumb {
   background-color: #0000008c;
-  border: 2px solid #555555;
 }
