@@ -31,13 +31,19 @@
 }
 
 .separator_login {
-  width: 200px;
-  background-color: #15883e;
   height: 1px;
+  width: 200px;
+  margin: 10px auto;
   border: 0;
-  margin: 10px;
+  background-color: #15883e;
 }
 
-.login__container > div > p {
+.login__container > div {
   color: gray;
+}
+
+.note {
+  display: block;
+  padding: 10px;
+  font-size: 10px;
 }

@@ -13,6 +13,9 @@ function Login() {
       <div>
         <hr className="separator_login" />
         <p>- Spotify Clone - React -</p>
+        <span className="note">
+          Note : Premium account required for player options
+        </span>
       </div>
     </div>
   );
