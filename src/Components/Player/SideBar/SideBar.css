@@ -9,7 +9,9 @@
 }
 
 .playlist__container {
-  overflow-y: overlay;
+  overflow-y: scroll;
+  scrollbar-color: #2e2e2e8c #00000000;
+  scrollbar-width: thin;
 }
 
 .playlist__container::-webkit-scrollbar {

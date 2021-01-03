@@ -2,7 +2,9 @@
   flex: 0.8;
   height: calc(100vh - 100px);
   padding: 10px 20px;
-  overflow-y: overlay;
+  overflow-y: scroll;
+  scrollbar-color: #0000008c #00000000;
+  scrollbar-width: thin;
 
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
@@ -17,7 +19,9 @@
   flex: 0.8;
   height: calc(100vh - 100px);
   padding: 10px 20px;
-  overflow-y: overlay;
+  overflow-y: scroll;
+  scrollbar-color: #0000008c #00000000;
+  scrollbar-width: thin;
 
   background: linear-gradient(-45deg, #ffffff, #000000);
 }
