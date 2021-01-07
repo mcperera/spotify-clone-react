@@ -13,8 +13,6 @@ function Header() {
     dispatch({ type: "SET_TOKEN", token: null });
   };
 
-  console.log(user?.images[0]?.url);
-
   return (
     <div className="header__container">
       <div className="header__left"></div>
