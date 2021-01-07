@@ -30,3 +30,48 @@
 .left__container > .MuiSvgIcon-root:hover {
   fill: rgb(255, 53, 53);
 }
+
+@media only screen and (max-width: 600px) {
+  .left__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  .album {
+    display: block;
+
+    max-width: 350px;
+    height: 100%;
+    width: 90%;
+    margin: 0;
+    object-fit: contain;
+  }
+
+  .song__info {
+    text-align: center;
+    padding: 0px;
+    margin: 10px 0;
+  }
+
+  .song__info > h4 {
+    font-weight: 500;
+  }
+
+  .song__info > p {
+    font-size: 13px;
+  }
+
+  .favorite__icon {
+    margin: 10px auto;
+    cursor: pointer;
+  }
+
+  .left__container > .MuiSvgIcon-root:hover {
+    fill: rgb(255, 53, 53);
+  }
+}

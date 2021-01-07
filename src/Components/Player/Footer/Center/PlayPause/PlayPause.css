@@ -7,3 +7,9 @@
 .play__pause {
   font-size: 2.7rem !important;
 }
+
+@media only screen and (max-width: 600px) {
+  .play__pause {
+    font-size: 3.7rem !important;
+  }
+}

@@ -1,0 +1,49 @@
+.mobile__body {
+  height: max-content;
+  width: 100%;
+  padding: 10px;
+  color: white;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+  -moz-animation: gradient 15s ease infinite;
+  -o-animation: gradient 15s ease infinite;
+  -ms-transition: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
+}
+
+.not__playing {
+  background: linear-gradient(-45deg, #5d5d5d, #000000) !important;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 80px;
+  padding: 10px;
+}
+
+.down__arrow {
+  flex: 0.2;
+}
+
+.current__playlist__name {
+  flex: 0.6;
+  text-align: center;
+}
+
+.playlist {
+  flex: 0.2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.current__track__container {
+  height: calc(97vh - 250px);
+  width: 100%;
+  padding: 20px;
+}

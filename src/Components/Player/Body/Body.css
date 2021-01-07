@@ -58,3 +58,13 @@
 .body__container2::-webkit-scrollbar-thumb {
   background-color: #0000008c;
 }
+
+/* @media only screen and (max-width: 600px) {
+  .body__container {
+    display: none;
+  }
+
+  .body__container2 {
+    display: none;
+  }
+} */

@@ -21,3 +21,18 @@
 .footer_right {
   flex: 0.3;
 }
+
+@media only screen and (max-width: 600px) {
+  .footer_left {
+    display: none;
+  }
+
+  .footer_center {
+    flex: 1;
+    height: 150px;
+  }
+
+  .footer_right {
+    display: none;
+  }
+}

@@ -29,7 +29,7 @@ function SongProgress() {
       spotify.getMyCurrentPlaybackState().then((state) => {
         if (state) {
           var progress_ms = state.progress_ms;
-          var duration_ms = state.item.duration_ms;
+          var duration_ms = state.item.duration_ms ? state.item.duration_ms : 0;
 
           const durationMin = miliToMin(duration_ms);
           const currentProgMin = miliToMin(progress_ms);
