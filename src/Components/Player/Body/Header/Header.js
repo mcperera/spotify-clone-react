@@ -13,6 +13,8 @@ function Header() {
     dispatch({ type: "SET_TOKEN", token: null });
   };
 
+  console.log(user?.images[0]?.url);
+
   return (
     <div className="header__container">
       <div className="header__left"></div>
@@ -20,7 +22,7 @@ function Header() {
         <div className="user__details">
           <Avatar
             className="avatar"
-            src={user?.images[0].url ? user?.images[0].url : null}
+            src={user?.images[0]?.url ? user?.images[0].url : null}
           />
           <p>{user?.display_name ? user?.display_name : "Hello User"}</p>
         </div>
